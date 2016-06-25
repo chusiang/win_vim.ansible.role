@@ -1,0 +1,27 @@
+#!/usr/bin/env ansible-playbook
+# vim:ft=ansible :
+
+---
+
+- name: delegate to 'msi' system for installation
+  include: use-msi.yml
+  when: "ansible_os_family == 'Windows'"
+
+# inputrc
+- name: use vi-mode in readline
+  become: yes
+  lineinfile: dest='/etc/inputrc' line='set editing-mode vi'
+  when: ansible_os_family != "Windows"
+
+# gitconfig
+- name: setting vi-mode for git
+  become: yes
+  template: >
+    src='templates/gitconfig.j2'
+    dest='/etc/gitconfig'
+    owner=root
+    group=root
+    mode=0644
+    backup=yes
+  when: ansible_os_family != "Windows"
+

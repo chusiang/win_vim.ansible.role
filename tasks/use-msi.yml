@@ -1,0 +1,15 @@
+#!/usr/bin/env ansible-playbook
+
+---
+
+# Install Vim.
+- name: get vim.msi on windows
+  win_get_url:
+    url: 'http://downloads.sourceforge.net/project/vim-msi/vim-7.4.0.msi'
+    dest: '{{ vim_path }}\vim-7.4.0.msi'
+
+- name: install vim with msi
+  win_msi:
+    path: '{{ vim_path }}\vim-7.4.0.msi'
+
+# vim:ft=ansible :
