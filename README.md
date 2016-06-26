@@ -12,6 +12,12 @@ None.
 
 None.
 
+    vim_msi_url: 'http://downloads.sourceforge.net/project/vim-msi/vim-7.4.0.msi'
+    vim_msi_filename: 'vim-7.4.0.msi'
+    
+    tmp_path: 'C:\temp'
+    vimrc_path: 'C:\Program Files (x86)\vim'
+
 ## Dependencies
 
 None.

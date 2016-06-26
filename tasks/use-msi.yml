@@ -2,12 +2,13 @@
 
 ---
 
-# Install Vim.
+# Get Vim.
 - name: get vim.msi on windows
   win_get_url:
     url: '{{ vim_msi_url }}'
     dest: '{{ tmp_path }}\{{ vim_msi_filename }}'
 
+# Install Vim.
 - name: install vim with msi
   win_msi:
     path: '{{ tmp_path }}\{{ vim_msi_filename }}'
