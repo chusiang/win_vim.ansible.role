@@ -1,0 +1,4 @@
+[windows]
+win10.local ansible_host=127.0.0.1 ansible_user=IEUser ansible_password=Passw0rd! ansible_port=55986
+
+# vim: ft=ansible :

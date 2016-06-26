@@ -4,6 +4,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "windows10" do |node|
       node.vm.box = "chusiang/win10-x64-ansible"
       node.vm.communicator = "winrm"
+      node.winrm.username = "IEUser"
+      node.winrm.password = "Passw0rd!"
       node.vm.network "forwarded_port", guest: 3389, host: 3389
 
       node.vm.provider "virtualbox" do |vb|
