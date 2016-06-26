@@ -12,9 +12,9 @@
   win_msi:
     path: '{{ tmp_path }}\{{ vim_msi_filename }}'
 
-- name: use dark background in vim
-  win_lineinfile:
-    dest: '{{ vimrc_path }}\_vimrc'
-    line: 'set background=dark'
+#- name: use dark background in vim
+#  win_lineinfile:
+#    dest: '{{ vimrc_path }}\_vimrc'
+#    line: 'set background=dark'
 
 # vim:ft=ansible :
