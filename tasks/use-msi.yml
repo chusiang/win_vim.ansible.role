@@ -7,6 +7,7 @@
   win_get_url:
     url: '{{ vim_msi_url }}'
     dest: '{{ tmp_path }}\{{ vim_msi_filename }}'
+    force: no
 
 # Install Vim.
 - name: install vim with msi
