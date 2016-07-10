@@ -10,7 +10,7 @@ None.
 
 ## Role Variables
 
-None.
+Available variables are listed below, along with default values (see defaults/main.yml):
 
     vim_msi_url: 'http://downloads.sourceforge.net/project/vim-msi/vim-7.4.0.msi'
     vim_msi_filename: 'vim-7.4.0.msi'
